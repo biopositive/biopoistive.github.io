@@ -1,0 +1,193 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: #2A2B2A;
+  color: #D3D4D9;
+}
+/* Navigation bar styling */
+nav {
+  
+  padding: 5px 28px;
+}
+.menu {
+  list-style: none;
+}
+a {
+  color: #DDD92A;
+  opacity: 0.7;
+  text-decoration: none;
+}
+a:hover {
+  opacity: 1;
+}
+.menu li {
+  font-size: 1.2em;
+  padding: 15px 5px;
+}
+.menu li a {
+  display: block;
+}
+.logo a {
+  font-size: 1.5em;
+  opacity: 1;
+}
+/* Mobile menu */
+.menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.toggle {
+  order: 1;
+}
+.item {
+  width: 100%;
+  text-align: center;
+  order: 2;
+  display: none;
+}
+.item.active {
+  display: block;
+}
+.toggle {
+  cursor: pointer;
+}
+.bars {
+  background-color: #DDD92A;
+  display: inline-block;
+  height: 2px;
+  position: relative;
+  width: 18px;
+}
+.bars::before,
+.bars::after {
+  content: "";
+  background-color: #DDD92A;
+  display: inline-block;
+  height: 2px;
+  position: absolute;
+  width: 18px;
+}
+.bars::before {
+  top: 5px;
+}
+.bars::after {
+  top: -5px;
+}
+
+/* Tablet menu */
+@media all and (min-width: 468px) {
+  .menu {
+    justify-content: center;
+  }
+  .logo {
+    flex: 1;
+  }
+}
+
+@media all and (min-width: 768px) {
+  .item {
+    display: block;
+    width: auto;
+  }
+  .toggle {
+    display: none;
+  }
+  .logo {
+    order: 0;
+  }
+  .item {
+    order: 1;
+  }
+  .menu li {
+    padding: 15px 10px;
+  }
+}
+
+/* Page Content styling */
+
+/* Member page */
+.people {
+  margin-top: 1em;
+  display: flex;
+  margin-left: 2em;
+  flex-wrap: wrap;
+}
+img {
+  width: 14em;
+  border-radius: 5%;
+  margin: 0 auto;
+}
+.details {
+  margin-top: 1em;
+  text-align: center;
+}
+.about {
+  list-style: none;
+}
+.name {
+  font-size: 1.7em;
+  color: #507DBC;
+}
+.position {
+  font-size: 1.4em;
+}
+.about li {
+  margin-top: 1em;
+}
+.email {
+  color: #507DBC;
+}
+.divider {
+  height: 2px;
+  width: 80%;
+  background-color: #000;
+  margin: 1em auto;
+  border-radius: 10%;
+}
+.title {
+  margin: 0 auto;
+  font-size: 2.3em;
+  color: #507DBC;
+  display: block;
+
+}
+@media all and (min-width: 468px) {
+  .people {
+    flex-wrap: nowrap;
+  }
+  .people:first-of-type {
+    margin-top: 15px;
+    margin-left: 15px;
+  }
+  .details {
+    margin-left: 1em;
+    text-align: left;
+  }
+  img {
+    margin: 0 0;
+  }
+}
+/* Contact page styling */
+.title {
+  margin-top: 1em;
+  text-align: center;
+}
+#map {
+  display: flex;
+  justify-content: center;
+  margin: 1em 0;
+  width: 30%;
+}
+.contact-details {
+  margin-left: 0.5em;
+  text-align: center;
+}
+.header {
+  font-size: larger;
+  font-weight: 600;
+}
