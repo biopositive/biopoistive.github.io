@@ -115,6 +115,7 @@ a:hover {
   margin-top: 1em;
   display: flex;
   flex-wrap: wrap;
+  width: 90vw;
 }
 img {
   width: 14em;
